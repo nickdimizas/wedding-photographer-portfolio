@@ -20,10 +20,53 @@
     <main>
       <section
         id="hero"
-        class="h-screen flex flex-col justify-center items-center hero"
+        class="h-screen flex flex-col justify-center items-center text-base hero relative"
+        aria-label="Hero section introducing wedding photographer Stratos Zografos"
       >
-        <div><h1 class="">Capturing Timeless Weddings</h1></div>
-        <div><p>Elegant, emotional storytelling through photography</p></div>
+        <!-- Background image -->
+        <img
+          src="./assets/images/hero.webp"
+          alt="Elegant wedding photography by Stratos Zografos"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center max-w-2xl">
+          <div class="mb-4 text-white/80">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 mx-auto"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 7h2l2-3h10l2 3h2v13H3V7z"
+              />
+            </svg>
+          </div>
+          <h1 class="text-5xl md:text-6xl font-serif text-white tracking-tight">
+            Stratos Zografos
+          </h1>
+
+          <p
+            class="text-white/80 flex items-center justify-center mt-4 gap-3 text-sm md:text-base"
+          >
+            <span class="text-white">—</span>
+            <span>Elegant, emotional storytelling through photography</span>
+            <span class="text-white">—</span>
+          </p>
+          <button
+            class="text-white mt-8 px-6 py-3 border border-white/80 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer tracking-wide"
+          >
+            View Work
+          </button>
+        </div>
       </section>
       <!-- hero -->
       <section id="work"></section>
