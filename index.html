@@ -33,7 +33,6 @@
       rel="stylesheet"
     />
     <link href="./dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body class="bg-background text-primary">
     <header></header>
@@ -50,6 +49,7 @@
           src="./assets/images/hero.webp"
           alt="Elegant wedding photography by Stratos Zografos"
           class="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40"></div>
@@ -68,14 +68,16 @@
           </h1>
 
           <p
-            class="text-white/80 flex items-center justify-center mt-4 gap-3 text-sm md:text-base"
+            class="text-white/80 font-sans flex items-center justify-center mt-4 gap-3 text-sm md:text-base"
           >
             <span class="text-white">—</span>
-            <span>Elegant, emotional storytelling through photography</span>
+            <span class="font-sans"
+              >Elegant, emotional storytelling through photography</span
+            >
             <span class="text-white">—</span>
           </p>
           <button
-            class="text-white mt-8 px-6 py-3 border border-white/80 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer tracking-wide"
+            class="text-white font-sans mt-8 px-6 py-3 border border-white/80 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer tracking-wide"
           >
             View Work
           </button>
@@ -87,7 +89,7 @@
         <div class="max-w-6xl mx-auto px-4">
           <div class="text-center">
             <h2 class="text-3xl md:text-4xl font-serif text-primary">Work</h2>
-            <p class="mt-3 text-sm md:text-base text-secondary">
+            <p class="mt-3 text-sm md:text-base text-secondary font-sans">
               Professional photography for weddings, real estate, and luxury
               brands
             </p>
@@ -102,6 +104,8 @@
                 src="./assets/images/card-1.webp"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Weddings Category"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
@@ -109,7 +113,7 @@
               <div class="absolute bottom-4 left-4 text-white">
                 <h3 class="text-xl font-serif">Weddings</h3>
                 <p
-                  class="text-sm opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                 >
                   Timeless storytelling for your most cherished moments
                 </p>
@@ -122,6 +126,8 @@
                 src="./assets/images/card-2.webp"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Commercial Category"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
@@ -129,7 +135,7 @@
               <div class="absolute bottom-4 left-4 text-white">
                 <h3 class="text-xl font-serif">Architecture & Editorial</h3>
                 <p
-                  class="text-sm opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                 >
                   Precision photography for luxury estates, yachts, and fashion
                 </p>
@@ -151,6 +157,8 @@
               src="./assets/images/EZO-3.webp"
               alt="Portrait of Stratos Zografos"
               class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -163,13 +171,13 @@
               class="block w-12 border-t border-primary/60 mt-3 mb-6"
             ></span>
 
-            <p class="text-primary/80 leading-relaxed">
+            <p class="text-primary/80 font-sans leading-relaxed">
               Born and raised in Athens, Greece, from a young age I felt safe in
               the art of observation. Street photography became naturally a part
               of my everyday life, teaching me to adapt in every situation.
             </p>
 
-            <p class="text-primary/80 leading-relaxed mt-4">
+            <p class="text-primary/80 font-sans leading-relaxed mt-4">
               I believe in the purity of spontaneous moments and expressions,
               intervening only when necessary. Every place becomes a unique
               studio — from islands and mountains to cities and villages —
@@ -181,7 +189,111 @@
       </section>
 
       <!-- contact -->
-      <section id="contact"></section>
+      <section id="contact" class="py-20 px-4 md:px-8">
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
+        >
+          <!-- Form -->
+          <div class="w-full md:max-w-none">
+            <h2 class="text-3xl md:text-4xl text-primary font-serif">
+              Get in touch
+            </h2>
+
+            <span class="block w-12 border-t border-primary mt-3 mb-6"></span>
+            <p class="text-sm text-secondary/80 mt-2">Athens, Greece</p>
+
+            <form class="flex flex-col gap-4 mt-6" novalidate>
+              <div class="flex flex-col">
+                <label for="firstname" class="text-sm font-sans mb-1"
+                  >First Name</label
+                >
+                <input
+                  id="firstname"
+                  name="firstname"
+                  type="text"
+                  placeholder="Enter your first name"
+                  required
+                  autocomplete="given-name"
+                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="lastname" class="text-sm font-sans mb-1"
+                  >Last Name</label
+                >
+                <input
+                  id="lastname"
+                  name="lastname"
+                  type="text"
+                  placeholder="Enter your last name"
+                  required
+                  autocomplete="family-name"
+                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="email" class="text-sm font-sans mb-1">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  autocomplete="email"
+                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="subject" class="text-sm font-sans mb-1"
+                  >Subject</label
+                >
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Enter your subject"
+                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="content" class="text-sm font-sans mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="content"
+                  name="message"
+                  placeholder="Enter your message"
+                  rows="4"
+                  required
+                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-4 border border-primary px-6 py-2 font-sans hover:bg-primary hover:text-white transition duration-300 cursor-pointer tracking-wide"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Image -->
+          <div class="w-full h-[420px] md:h-[480px] overflow-hidden">
+            <img
+              src="./assets/images/card-1.webp"
+              alt="Bride and groom sharing a moment during wedding ceremony"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>

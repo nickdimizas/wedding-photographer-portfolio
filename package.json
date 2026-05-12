@@ -4,8 +4,8 @@
   "description": "Modern responsive wedding photographer portfolio built with HTML, Tailwind CSS and JavaScript.",
   "main": "tailwind.config.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/output.css --minify"
+    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify"
   },
   "repository": {
     "type": "git",
