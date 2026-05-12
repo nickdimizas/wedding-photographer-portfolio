@@ -85,7 +85,7 @@
       </section>
 
       <!-- work -->
-      <section id="work" class="py-20">
+      <section id="work" class="py-20 px-4 md:px-8">
         <div class="max-w-6xl mx-auto px-4">
           <div class="text-center">
             <h2 class="text-3xl md:text-4xl font-serif text-primary">Work</h2>
@@ -146,9 +146,9 @@
       </section>
 
       <!-- about -->
-      <section id="about" class="py-16 px-4 md:px-8">
+      <section id="about" class="py-20 px-4 md:px-8">
         <div
-          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center"
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center"
         >
           <div
             class="w-full max-w-[420px] h-[420px] md:h-[480px] overflow-hidden"
@@ -191,10 +191,10 @@
       <!-- contact -->
       <section id="contact" class="py-20 px-4 md:px-8">
         <div
-          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 md:items-stretch px-4"
         >
           <!-- Form -->
-          <div class="w-full md:max-w-none">
+          <div class="flex flex-col justify-center md:max-w-md mx-auto w-full">
             <h2 class="text-3xl md:text-4xl text-primary font-serif">
               Get in touch
             </h2>
@@ -202,7 +202,10 @@
             <span class="block w-12 border-t border-primary mt-3 mb-6"></span>
             <p class="text-sm text-secondary/80 mt-2">Athens, Greece</p>
 
-            <form class="flex flex-col gap-4 mt-6" novalidate>
+            <form
+              class="flex flex-col gap-4 mt-6 md:items-stretch text-secondary"
+              novalidate
+            >
               <div class="flex flex-col">
                 <label for="firstname" class="text-sm font-sans mb-1"
                   >First Name</label
@@ -283,9 +286,9 @@
           </div>
 
           <!-- Image -->
-          <div class="w-full h-[420px] md:h-[480px] overflow-hidden">
+          <div class="overflow-hidden">
             <img
-              src="./assets/images/card-1.webp"
+              src="./assets/images/hero.webp"
               alt="Bride and groom sharing a moment during wedding ceremony"
               loading="lazy"
               decoding="async"
