@@ -35,7 +35,66 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-background text-primary">
-    <header></header>
+    <!-- Header-->
+    <header
+      class="fixed top-0 left-0 z-50 h-24 w-full px-8 md:px-16 flex items-center justify-between bg-surface/90 backdrop-blur-md border-b border-primary/5 shadow-sm transition-all duration-300"
+    >
+      <!-- Logo Area -->
+      <div class="flex items-center gap-4">
+        <img
+          src="./assets/icons/logo.svg"
+          alt="Stratos Zografos Logo"
+          class="h-8 w-auto opacity-90"
+          aria-hidden="true"
+        />
+        <h1
+          class="font-serif text-lg md:text-xl uppercase tracking-[0.3rem] leading-none"
+        >
+          Stratos Zografos
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:block">
+        <ul
+          class="flex gap-10 text-[10px] uppercase tracking-[0.2em] font-sans font-medium text-secondary hover:text-primary transition-colors"
+        >
+          <li>
+            <a
+              href="#home"
+              class="hover:text-accent transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#work"
+              class="hover:text-accent transition-colors duration-300"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="hover:text-accent transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-accent transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button
+          class="md:hidden text-primary uppercase text-[10px] tracking-widest"
+        >
+          Menu
+        </button>
+      </nav>
+    </header>
 
     <main>
       <!-- hero -->
@@ -55,25 +114,20 @@
         <div class="absolute inset-0 bg-black/40"></div>
 
         <!-- Content -->
-        <div class="relative z-10 text-center max-w-2xl">
-          <div class="mb-1">
-            <img
-              src="./assets/icons/logo.svg"
-              alt="Stratos Zografos Logo"
-              class="h-24 w-auto mx-auto opacity-90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
-            />
-          </div>
-          <h1 class="text-5xl md:text-6xl font-serif text-white tracking-tight">
+        <div class="relative z-10 text-center max-w-3xl px-6">
+          <h1
+            class="text-5xl md:text-7xl font-serif text-white tracking-tight leading-tight"
+          >
             Stratos Zografos
           </h1>
 
           <p
-            class="text-white/80 font-sans items-center mt-4 text-sm md:text-base"
+            class="text-white/90 font-sans items-center mt-8 text-sm md:text-lg tracking-wide italic"
           >
             Elegant, emotional storytelling through photography
           </p>
           <button
-            class="mt-8 px-8 py-3 text-white font-sans text-xs md:text-sm uppercase cursor-pointer tracking-widest border border-white/80 bg-transparent hover:bg-white hover:text-black active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all duration-200 ease-in-out"
+            class="mt-12 px-10 py-4 text-white font-sans text-xs md:text-sm uppercase cursor-pointer tracking-widest border border-white/80 bg-transparent hover:bg-white hover:text-black active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all duration-200 ease-in-out"
           >
             View Work
           </button>
