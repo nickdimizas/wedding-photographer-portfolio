@@ -32,64 +32,117 @@
   <body class="bg-background text-primary">
     <!-- Header-->
     <header
-      class="fixed top-0 left-0 z-50 h-24 w-full px-8 md:px-16 flex items-center justify-between bg-surface/90 backdrop-blur-md border-b border-primary/5 shadow-sm transition-all duration-300"
+      id="header"
+      class="fixed top-0 left-0 z-50 h-20 md:h-24 w-full px-6 md:px-16 flex items-center justify-between bg-surface/90 backdrop-blur-md border-b border-primary/5 shadow-sm transition-all duration-300"
     >
-      <!-- Logo Area -->
-      <div class="flex items-center gap-4">
+      <!-- Logo -->
+      <a
+        href="#hero"
+        class="flex items-center gap-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
         <img
           src="./assets/icons/logo.svg"
           alt=""
-          class="h-10 md:h-14 w-auto object-contain opacity-90 transition-opacity duration-300 hover:opacity-100"
+          class="h-10 md:h-12 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
           aria-hidden="true"
           loading="eager"
         />
-        <div
-          class="font-serif text-lg md:text-xl uppercase tracking-[0.25em] text-primary leading-none"
+        <span
+          class="font-serif text-base md:text-lg uppercase tracking-[0.25em] text-primary leading-none"
         >
           Stratos Zografos
-        </div>
-      </div>
+        </span>
+      </a>
 
-      <!-- Navigation -->
-      <nav class="hidden md:block">
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block" aria-label="Main Desktop Navigation">
         <ul
           class="flex gap-10 text-[10px] uppercase tracking-[0.2em] font-sans font-medium text-secondary hover:text-primary transition-colors"
         >
           <li>
             <a
               href="#hero"
-              class="hover:text-accent transition-colors duration-300"
+              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#work"
-              class="hover:text-accent transition-colors duration-300"
+              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Work</a
             >
           </li>
           <li>
             <a
               href="#about"
-              class="hover:text-accent transition-colors duration-300"
+              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >About</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="hover:text-accent transition-colors duration-300"
+              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Contact</a
             >
           </li>
         </ul>
-        <button
-          class="md:hidden text-primary uppercase text-[10px] tracking-widest"
-        >
-          Menu
-        </button>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="block md:hidden text-secondary hover:text-accent cursor-pointer px-2 py-1 font-sans text-[11px] font-medium uppercase tracking-[0.2em] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200 z-50"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span id="menu-text">Menu</span>
+      </button>
+      <!-- Mobile Dropdown Menu Drawer-->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-surface/98 backdrop-blur-md z-40 border-b border-primary/5 transition-all duration-300 ease-in-out md:hidden"
+        aria-hidden="true"
+      >
+        <nav
+          aria-label="Main Mobile Navigation"
+          class="w-full h-full flex flex-col justify-center items-center"
+        >
+          <ul
+            class="flex flex-col gap-10 text-center text-sm uppercase tracking-[0.25em] font-sans font-medium text-primary"
+          >
+            <li>
+              <a
+                href="#hero"
+                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#work"
+                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
