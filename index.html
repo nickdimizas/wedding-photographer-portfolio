@@ -38,7 +38,7 @@
       <!-- Logo -->
       <a
         href="#hero"
-        class="flex items-center gap-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        class="flex items-center gap-4 group rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <img
           src="./assets/icons/logo.svg"
@@ -62,28 +62,28 @@
           <li>
             <a
               href="#hero"
-              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#work"
-              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Work</a
             >
           </li>
           <li>
             <a
               href="#about"
-              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >About</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
               >Contact</a
             >
           </li>
@@ -93,7 +93,7 @@
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="block md:hidden text-secondary hover:text-accent cursor-pointer px-2 py-1 font-sans text-[11px] font-medium uppercase tracking-[0.2em] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200 z-50"
+        class="block md:hidden px-2 py-1 text-secondary font-sans text-[11px] font-medium uppercase tracking-[0.2em] rounded-sm hover:text-accent cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200 z-50"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
@@ -115,28 +115,28 @@
             <li>
               <a
                 href="#hero"
-                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#work"
-                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
                 >Work</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="mobile-nav-link block p-2 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
                 >Contact</a
               >
             </li>
@@ -176,7 +176,7 @@
             Elegant, emotional storytelling through photography
           </p>
           <button
-            class="mt-12 px-10 py-4 text-white font-sans text-xs md:text-sm uppercase cursor-pointer tracking-widest border border-white/80 bg-transparent hover:bg-white hover:text-black active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all duration-200 ease-in-out"
+            class="mt-12 px-10 py-4 text-white font-sans text-xs md:text-sm uppercase cursor-pointer tracking-widest border border-white/80 rounded-sm bg-transparent hover:bg-accent hover:border-accent active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-all duration-200 ease-in-out"
           >
             View Work
           </button>
@@ -196,40 +196,44 @@
 
           <!-- cards -->
           <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-18">
-            <div
-              class="h-[400px] relative overflow-hidden group cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            <!-- Card 1: Weddings -->
+            <a
+              href=""
+              class="block h-[400px] relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
             >
               <img
                 src="./assets/images/card-1.webp"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                 alt="Weddings Category"
                 loading="lazy"
                 decoding="async"
               />
               <div
-                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 group-focus-visible:bg-black/10 transition-colors duration-300"
               ></div>
               <div class="absolute bottom-4 left-4 text-white">
                 <h3 class="text-xl font-serif">Weddings</h3>
                 <p
-                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
                 >
                   Timeless storytelling for your most cherished moments
                 </p>
               </div>
-            </div>
-            <div
-              class="h-[400px] group relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            </a>
+            <!-- Card 2: Architecture & Editorial -->
+            <a
+              href=""
+              class="block h-[400px] group relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
             >
               <img
                 src="./assets/images/card-2.webp"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                 alt="Commercial Category"
                 loading="lazy"
                 decoding="async"
               />
               <div
-                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 group-focus-visible:bg-black/10 transition-colors duration-300"
               ></div>
               <div class="absolute bottom-4 left-4 text-white">
                 <h3 class="text-xl font-serif">Architecture & Editorial</h3>
@@ -239,7 +243,7 @@
                   Precision photography for luxury estates, yachts, and fashion
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -322,7 +326,7 @@
                   required
                   aria-required="true"
                   autocomplete="given-name"
-                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
                 />
               </div>
 
@@ -343,7 +347,7 @@
                   required
                   aria-required="true"
                   autocomplete="family-name"
-                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
                 />
               </div>
 
@@ -365,7 +369,7 @@
                   required
                   aria-required="true"
                   autocomplete="email"
-                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
                 />
               </div>
 
@@ -386,7 +390,7 @@
                   placeholder="Enter your subject"
                   required
                   aria-required="true"
-                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
                 />
               </div>
 
@@ -407,13 +411,13 @@
                   rows="4"
                   required
                   aria-required="true"
-                  class="border border-primary/20 px-3 py-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 ease-in-out resize-none"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                class="mt-4 w-full md:w-max px-10 py-4 font-sans text-xs md:text-sm uppercase border border-primary text-white bg-primary cursor-pointer tracking-widest hover:bg-accent hover:border-accent active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-200 ease-in-out"
+                class="mt-4 w-max px-10 py-4 font-sans text-xs md:text-sm uppercase border border-primary rounded-sm text-white bg-primary cursor-pointer tracking-widest hover:bg-accent hover:border-accent active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-200 ease-in-out"
               >
                 Send Message
               </button>
@@ -447,11 +451,12 @@
             <a
               href="#hero"
               class="inline-flex items-center gap-3 group p-2 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              aria-label="Stratos Zografos Portfolio - Back to top"
             >
               <img
                 src="./assets/icons/logo.svg"
-                alt="Stratos Zografos Logo"
-                class="h-7 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+                alt=""
+                class="h-6 md:h-7 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
                 loading="lazy"
               />
               <span
@@ -461,9 +466,9 @@
               </span>
             </a>
             <p
-              class="font-sans text-[11px] tracking-wider text-secondary/50 uppercase max-w-[240px] md:max-w-none mx-auto leading-relaxed"
+              class="font-sans text-[11px] tracking-wider text-secondary/50 uppercase mx-auto leading-relaxed"
             >
-              Available worldwide · Based in Athens
+              Based in Athens · Available worldwide
             </p>
           </div>
 
