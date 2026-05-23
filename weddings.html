@@ -39,9 +39,328 @@
   <body
     class="bg-background text-primary antialiased selection:bg-accent selection:text-white"
   >
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <!-- Header-->
+    <header
+      id="header"
+      class="fixed top-0 left-0 z-50 h-20 md:h-24 w-full px-6 md:px-16 flex items-center justify-between bg-surface/90 backdrop-blur-md border-b border-primary/5 shadow-sm transition-all duration-300"
+    >
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="flex items-center gap-4 group rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
+        <img
+          src="./assets/icons/logo.svg"
+          alt=""
+          class="h-10 md:h-12 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+          aria-hidden="true"
+          loading="eager"
+        />
+        <span
+          class="font-serif text-base md:text-lg uppercase tracking-[0.25em] text-primary leading-none"
+        >
+          Stratos Zografos
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block" aria-label="Main Desktop Navigation">
+        <ul
+          class="flex gap-10 text-[10px] uppercase tracking-[0.2em] font-sans font-medium text-secondary hover:text-primary transition-colors"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#work"
+              class="p-2 rounded-sm text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#about"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="block md:hidden px-2 py-1 text-secondary font-sans text-[11px] font-medium uppercase tracking-[0.2em] rounded-sm hover:text-accent cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200 z-50"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span id="menu-text">Menu</span>
+      </button>
+      <!-- Mobile Dropdown Menu Drawer-->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-surface/98 backdrop-blur-md z-40 border-b border-primary/5 transition-all duration-300 ease-in-out md:hidden"
+        aria-hidden="true"
+      >
+        <nav
+          aria-label="Main Mobile Navigation"
+          class="w-full h-full flex flex-col justify-center items-center"
+        >
+          <ul
+            class="flex flex-col gap-10 text-center text-sm uppercase tracking-[0.25em] font-sans font-medium text-primary"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#work"
+                aria-current="page"
+                class="mobile-nav-link block p-2 rounded-sm text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#about"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#contact"
+                class="mobile-nav-link block p-2 rounded-sm hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Gallery Header / Intro -->
+      <section
+        class="pt-32 pb-12 md:pt-40 md:pb-16 px-6 md:px-16 max-w-6xl mx-auto"
+        aria-labelledby="gallery-title"
+      >
+        <div class="max-w-2xl">
+          <!-- Breadcrumb Navigation-->
+          <nav aria-label="Breadcrumb" class="mb-4">
+            <ol
+              class="flex items-center gap-2 font-sans text-[10px] uppercase tracking-widest text-secondary"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-accent transition-colors duration-200"
+                  >Home</a
+                >
+              </li>
+              <li class="text-primary/30" aria-hidden="true">/</li>
+              <li>
+                <a
+                  href="index.html#work"
+                  class="hover:text-accent transition-colors duration-200"
+                  >Work</a
+                >
+              </li>
+              <li class="text-primary/30" aria-hidden="true">/</li>
+              <li class="text-primary font-medium" aria-current="page">
+                Weddings & Elopements
+              </li>
+            </ol>
+          </nav>
+
+          <!-- Main Page Heading -->
+          <h1
+            id="gallery-title"
+            class="text-4xl md:text-5xl lg:text-6xl font-serif text-primary tracking-tight leading-tight"
+          >
+            Weddings, Baptisms & Elopements
+          </h1>
+
+          <span class="block w-12 border-t border-accent mt-6 mb-6"></span>
+
+          <!-- Descriptive text contextualizing the photography style -->
+          <p
+            class="font-sans text-sm md:text-base text-secondary leading-relaxed max-w-xl"
+          >
+            A collection of romantic, candid, and authentic visual stories
+            captured across the landscapes of Greece. Focused on raw emotion,
+            spontaneous expressions, and the beauty of natural light.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="w-full bg-surface border-t border-primary/5 pt-16 pb-8 px-6 md:px-16 text-secondary"
+    >
+      <div class="max-w-4xl mx-auto flex flex-col gap-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 items-start text-center"
+        >
+          <!-- Footer logo -->
+          <div class="flex flex-col items-center gap-3">
+            <a
+              href="#"
+              class="inline-flex items-center gap-3 group p-2 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              aria-label="Wedding and Elopement Portfolio - Back to top"
+            >
+              <img
+                src="./assets/icons/logo.svg"
+                alt=""
+                class="h-6 md:h-7 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+                loading="lazy"
+              />
+              <span
+                class="font-serif text-xs uppercase tracking-[0.25em] text-primary leading-none"
+              >
+                Stratos Zografos
+              </span>
+            </a>
+            <p
+              class="font-sans text-[11px] tracking-wider text-secondary/50 uppercase mx-auto leading-relaxed"
+            >
+              Based in Athens · Available worldwide
+            </p>
+          </div>
+
+          <!-- Inquiries (Email & WhatsApp) -->
+          <div
+            class="flex flex-col items-center gap-2 font-sans text-xs tracking-wide"
+          >
+            <span
+              class="text-[9px] uppercase tracking-[0.2em] font-bold text-primary/30 block mb-1"
+              >Inquiries</span
+            >
+
+            <!-- Email Link  -->
+            <a
+              href="mailto:info@stratoszografos.com"
+              class="inline-flex items-center gap-2 p-2 rounded-sm text-secondary/80 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-secondary/60 group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span
+                class="group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+                >info@stratoszografos.com</span
+              >
+            </a>
+
+            <!-- WhatsApp Link  -->
+            <a
+              href="https://wa.me/306900000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 p-2 rounded-sm text-secondary/80 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 group"
+              aria-label="Chat on WhatsApp"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-secondary/60 group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span
+                class="group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+                >+30 690 000 0000</span
+              >
+            </a>
+          </div>
+
+          <!-- Journal Link Instagram  -->
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="text-[9px] uppercase tracking-[0.2em] font-bold text-primary/30 block mb-1"
+              >Journal</span
+            >
+            <a
+              href="https://instagram.com/stratoszografos"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 p-2 rounded-sm font-sans text-xs tracking-wide text-secondary/80 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-secondary/60 group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              <span
+                class="lowercase group-hover:text-accent group-focus-visible:text-accent transition-colors duration-300"
+                >@stratoszografos</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <hr class="border-primary/5 w-full" />
+
+        <!-- Copyright and legals -->
+        <div
+          class="text-center font-sans text-[10px] tracking-widest text-secondary/40 uppercase"
+        >
+          <p>
+            © <span id="footer-year">2026</span> Stratos Zografos. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="./src/js/main.js"></script>
   </body>
 </html>
