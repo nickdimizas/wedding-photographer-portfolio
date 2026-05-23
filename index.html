@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Metadata -->
+    <title>Stratos Zografos | Wedding & Commercial Photographer</title>
     <meta
       name="description"
       content="Wedding and commercial photographer based in Greece, capturing timeless and emotional visual stories."
     />
-    <title>Stratos Zografos | Wedding & Commercial Photographer</title>
+    <link rel="canonical" href="" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="./assets/icons/logo.svg?v=1" />
     <link
       rel="icon"
@@ -20,16 +25,20 @@
       sizes="180x180"
       href="./assets/icons/apple-touch-icon.png"
     />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-background text-primary">
+  <body
+    class="bg-background text-primary antialiased selection:bg-accent selection:text-white"
+  >
     <!-- Header-->
     <header
       id="header"
@@ -199,22 +208,22 @@
             <!-- Card 1: Weddings -->
             <a
               href=""
-              class="block h-[400px] relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
+              class="block h-[400px] relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
             >
               <img
                 src="./assets/images/card-1.webp"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Weddings Category"
                 loading="lazy"
                 decoding="async"
               />
               <div
-                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 group-focus-visible:bg-black/10 transition-colors duration-300"
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
               ></div>
               <div class="absolute bottom-4 left-4 text-white">
-                <h3 class="text-xl font-serif">Weddings</h3>
+                <h3 class="text-xl font-serif">Wedding & Elopement</h3>
                 <p
-                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+                  class="text-sm font-sans opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                 >
                   Timeless storytelling for your most cherished moments
                 </p>
@@ -223,17 +232,17 @@
             <!-- Card 2: Architecture & Editorial -->
             <a
               href=""
-              class="block h-[400px] group relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
+              class="block h-[400px] group relative overflow-hidden group cursor-pointer rounded-sm outline-none hover:-translate-y-1 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300"
             >
               <img
                 src="./assets/images/card-2.webp"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Commercial Category"
                 loading="lazy"
                 decoding="async"
               />
               <div
-                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 group-focus-visible:bg-black/10 transition-colors duration-300"
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"
               ></div>
               <div class="absolute bottom-4 left-4 text-white">
                 <h3 class="text-xl font-serif">Architecture & Editorial</h3>
@@ -314,7 +323,7 @@
                   for="firstname"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
                   >First Name
-                  <span class="text-accent font-bold ml-0.5" aria-hidden="true"
+                  <span class="text-accent font-bold ml-1" aria-hidden="true"
                     >*</span
                   ></label
                 >
@@ -326,7 +335,7 @@
                   required
                   aria-required="true"
                   autocomplete="given-name"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
                 />
               </div>
 
@@ -335,7 +344,7 @@
                   for="lastname"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
                   >Last Name
-                  <span class="text-accent font-bold ml-0.5" aria-hidden="true"
+                  <span class="text-accent font-bold ml-1" aria-hidden="true"
                     >*</span
                   ></label
                 >
@@ -347,7 +356,7 @@
                   required
                   aria-required="true"
                   autocomplete="family-name"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
                 />
               </div>
 
@@ -356,7 +365,7 @@
                   for="email"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
                   >Email<span
-                    class="text-accent font-bold ml-1.5"
+                    class="text-accent font-bold ml-2"
                     aria-hidden="true"
                     >*</span
                   ></label
@@ -369,7 +378,7 @@
                   required
                   aria-required="true"
                   autocomplete="email"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
                 />
               </div>
 
@@ -378,7 +387,7 @@
                   for="subject"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
                   >Subject<span
-                    class="text-accent font-bold ml-1.5"
+                    class="text-accent font-bold ml-2"
                     aria-hidden="true"
                     >*</span
                   ></label
@@ -390,7 +399,7 @@
                   placeholder="Enter your subject"
                   required
                   aria-required="true"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
                 />
               </div>
 
@@ -399,7 +408,7 @@
                   for="message"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
                   >Message<span
-                    class="text-accent font-bold ml-1"
+                    class="text-accent font-bold ml-2"
                     aria-hidden="true"
                     >*</span
                   ></label
@@ -411,7 +420,7 @@
                   rows="4"
                   required
                   aria-required="true"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all duration-200 ease-in-out resize-none"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out resize-none"
                 ></textarea>
               </div>
 
