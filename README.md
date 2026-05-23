@@ -30,9 +30,15 @@ A premium, high-end editorial portfolio application built for Athens-based fine 
 
 ## 🗺 Production Roadmap
 
-- [x] **Hero Masthead & Identity Layer:** High-fashion asymmetric collage introduction.
-- [x] **Curated Work Grid:** Responsive multi-category selection cards with strict max-height aspect clamping.
-- [x] **Accessible Form Infrastructure:** Semantic contact module with keyboard focus-state management.
-- [ ] **Sticky Micro-Navigation Header:** Scroll-aware fixed interaction deck *(Current Sprint)*.
-- [ ] **Brand-Aligned Signature Footer:** Minimalist legal and index indexing map.
-- [ ] **Asynchronous Filtering Engine:** Vanilla JS portfolio transition pipeline.
+- [x] **Phase 1: Core Layout & Brand Identity** 
+  * Establishing the typographic engine, editorial layout structure, and responsive design tokens.
+- [x] **Phase 2: Portfolio Showcase Framework** 
+  * Engineering curated visual grid components with aspect-ratio management and fluid text layers.
+- [x] **Phase 3: Interactive Component Infrastructure** 
+  * Building accessible user-interaction points, form validation mechanics, and interactive UI feedback loops.
+- [ ] **Phase 4: Global Site Shell & Navigation** 
+  * Implementing scroll-aware sticky headers and the structural footer layout system. *(Current Phase)*
+- [ ] **Phase 5: Dynamic Client Features** 
+  * Layering vanilla script mechanics for seamless asynchronous media sorting and gallery filtering.
+- [ ] **Phase 6: Deployment & Asset Optimization Calibration** 
+  * Auditing Core Web Vitals, testing cross-browser rendering, and final asset compression checks.
