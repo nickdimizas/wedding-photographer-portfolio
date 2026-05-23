@@ -156,40 +156,110 @@
 
     <!-- Main -->
     <main>
-      <!-- Hero Section-->
+      <!-- Hero Section -->
       <section
         id="hero"
-        class="min-h-screen flex flex-col justify-center items-center relative"
-        aria-label="Hero section introducing wedding photographer Stratos Zografos"
+        class="relative w-full bg-background pb-24"
+        aria-label="Branding and editorial portfolio introduction"
       >
-        <!-- Background image -->
-        <img
-          src="./assets/images/hero.webp"
-          alt="Elegant wedding photography by Stratos Zografos"
-          class="absolute inset-0 w-full h-full object-cover"
-          decoding="async"
-        />
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <!-- 1. Full-Width Panoramic Masthead -->
+        <div
+          class="w-full h-[65vh] md:h-[70vh] overflow-hidden bg-muted shadow-xs"
+        >
+          <img
+            src="./assets/images/hero.webp"
+            alt="Cinematic fine art landscape wedding photograph"
+            class="w-full h-full object-cover object-center"
+            fetchpriority="high"
+          />
+        </div>
 
-        <!-- Content -->
-        <div class="relative z-10 text-center max-w-3xl px-6">
+        <!-- 2. Typographic Identity Layer -->
+        <div class="max-w-7xl mx-auto px-6 md:px-16 mt-12 md:mt-16">
+          <span
+            class="block font-sans text-[10px] uppercase tracking-[0.3em] text-accent font-medium mb-3"
+          >
+            Fine Art & Architectural Photography
+          </span>
           <h1
-            class="text-5xl md:text-7xl font-serif text-white tracking-tight leading-tight"
+            class="text-5xl md:text-7xl lg:text-8xl font-serif text-primary tracking-tight leading-none"
           >
             Stratos Zografos
           </h1>
+          <span
+            class="block w-16 border-t border-accent mt-6 mb-10 md:mt-8 md:mb-14"
+          ></span>
+        </div>
 
-          <p
-            class="text-white/90 font-sans items-center mt-8 text-sm md:text-lg tracking-wide italic"
+        <!-- 3. The Scattered Editorial Collage Layout Container -->
+        <div
+          class="max-w-5xl mx-auto px-6 md:px-16 mt-14 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 relative"
+        >
+          <!-- Left Column: The Philosophy Paragraph & Call to Action (Spans 5 Columns) -->
+          <div
+            class="md:col-span-5 flex flex-col justify-center items-start z-20 space-y-6 md:pr-4"
           >
-            Elegant, emotional storytelling through photography
-          </p>
-          <button
-            class="mt-12 px-10 py-4 text-white font-sans text-xs md:text-sm uppercase cursor-pointer tracking-widest border border-white/80 rounded-sm bg-transparent hover:bg-accent hover:border-accent active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-all duration-200 ease-in-out"
+            <p
+              class="font-sans text-sm md:text-base text-secondary leading-relaxed tracking-wide"
+            >
+              Believing that the most powerful images exist in the quiet spaces
+              between moments—where honest human emotion intersects with the
+              clean, deliberate geometry of physical design. This portfolio is a
+              curated study of those interactions, captured across shifting
+              light, luxury architecture, and timeless milestones.
+            </p>
+            <a
+              href="#work"
+              class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-primary hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 group"
+            >
+              Explore Portfolios
+              <span
+                class="transform group-hover:translate-x-1 transition-transform duration-300"
+                >→</span
+              >
+            </a>
+          </div>
+
+          <!-- Right Area: The Scattered Visuals (Spans 7 Columns in a Mini-Grid) -->
+          <div
+            class="md:col-span-7 grid grid-cols-2 gap-4 md:gap-6 relative mt-12 md:mt-0"
           >
-            View Work
-          </button>
+            <!-- Collage Image 1: Small Vertical Frame (Slightly tilted left, offset upward) -->
+            <div
+              class="w-full aspect-[3/4] bg-muted shadow-sm md:-translate-y-12 -rotate-2 transform transition-transform duration-500 hover:rotate-0 hover:scale-105 z-10"
+            >
+              <img
+                src="./assets/images/card-1.webp"
+                alt="Editorial detail fragment"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Collage Image 2: Higher Horizontal Frame (Shifted right, straight alignment) -->
+            <div
+              class="w-full aspect-[4/3] bg-muted shadow-md md:translate-y-4 z-0 transition-transform duration-500 hover:scale-105"
+            >
+              <img
+                src="./assets/images/card-2.webp"
+                alt="Architectural space fragment"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Collage Image 3: Overlapping Detail Frame (Tilted right, bleeding down) -->
+            <div
+              class="col-span-2 w-2/3 mx-auto aspect-[16/10] bg-muted shadow-lg md:-translate-y-6 md:translate-x-8 rotate-1 transform transition-transform duration-500 hover:rotate-0 hover:scale-105 z-20"
+            >
+              <img
+                src="./assets/images/hero.webp"
+                alt="Atmospheric textures fragment"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -208,7 +278,9 @@
             >
               The Work
             </h2>
-            <span class="block w-12 border-t border-accent mt-5 mb-5"></span>
+            <span
+              class="block w-12 border-t border-accent mt-6 mb-10 md:mt-8 md:mb-14"
+            ></span>
             <p
               class="font-sans text-sm md:text-base text-secondary leading-relaxed max-w-2xl"
             >
@@ -323,7 +395,9 @@
               About Me
             </h2>
 
-            <span class="block w-12 border-t border-accent mt-6 mb-6"></span>
+            <span
+              class="block w-12 border-t border-accent mt-6 mb-10 md:mt-8 md:mb-14"
+            ></span>
 
             <p class="text-primary/80 font-sans leading-relaxed">
               Born and raised in Athens, Greece, from a young age I felt safe in
@@ -355,7 +429,9 @@
               Get in touch
             </h2>
 
-            <span class="block w-12 border-t border-accent mt-6 mb-6"></span>
+            <span
+              class="block w-12 border-t border-accent mt-6 mb-10 md:mt-8 md:mb-14"
+            ></span>
             <p class="text-sm text-secondary/80 mt-2">Athens, Greece</p>
 
             <form
