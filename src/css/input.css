@@ -7,8 +7,10 @@
   --color-primary: #1c1c1c;
   --color-secondary: #6f6f6f;
   --color-muted: #e6e6e6;
-  --color-accent: #c6a75e;
-  --color-accent-hover: #a88a45;
+  /* --color-accent: #c6a75e; */
+  --color-accent: #a67c52;
+  --color-accent-hover: #785433;
+  /* --color-accent-hover: #a88a45; */
 
   /* Fonts */
   --font-serif: "Playfair Display", serif;
