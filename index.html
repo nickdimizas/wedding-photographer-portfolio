@@ -54,7 +54,7 @@
           alt=""
           class="h-10 md:h-12 w-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
           aria-hidden="true"
-          loading="eager"
+          fetchpriority="high"
         />
         <span
           class="font-serif text-base md:text-lg uppercase tracking-[0.25em] text-primary leading-none"
@@ -102,7 +102,7 @@
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="block md:hidden px-2 py-1 text-secondary font-sans text-[11px] font-medium uppercase tracking-[0.2em] rounded-sm hover:text-accent cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200 z-50"
+        class="block md:hidden px-2 py-1 text-secondary font-sans text-[11px] font-medium uppercase tracking-[0.2em] rounded-sm hover:text-accent cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 z-50"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
@@ -169,7 +169,7 @@
           <img
             src="./assets/images/hero.webp"
             alt="Cinematic, wide-angle portrait of a wedding couple embraced on the sun-bleached stone steps of a Mani villa"
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover"
             fetchpriority="high"
           />
         </div>
@@ -210,11 +210,11 @@
             </p>
             <a
               href="#work"
-              class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-primary hover:text-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 group"
+              class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-primary hover:text-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 transition-colors duration-300 group"
             >
               Explore Portfolios
               <span
-                class="transform group-hover:translate-x-1 transition-transform duration-300"
+                class="inline-block transform group-hover:translate-x-1 transition-transform duration-300"
                 >→</span
               >
             </a>
@@ -302,11 +302,11 @@
             >
               <!-- Image Wrapper Container -->
               <div
-                class="w-full aspect-[4/5] md:aspect-[3/4] max-h-[50vh] overflow-hidden bg-muted shadow-xs group-hover:shadow-md transition-shadow duration-500"
+                class="w-full aspect-[4/5] md:aspect-[3/4] max-h-[50vh] overflow-hidden bg-muted"
               >
                 <img
                   src="./assets/images/card-1.webp"
-                  class="w-full h-full object-cover scale-100 group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  class="w-full h-full object-cover scale-100 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   alt="Romantic sunset couple portrait highlighting fine art wedding photography style"
                   loading="lazy"
                   decoding="async"
@@ -338,11 +338,11 @@
             >
               <!-- Image Wrapper Container -->
               <div
-                class="w-full aspect-[4/5] md:aspect-[3/4] max-h-[50vh] overflow-hidden bg-muted shadow-xs group-hover:shadow-md transition-shadow duration-500"
+                class="w-full aspect-[4/5] md:aspect-[3/4] max-h-[50vh] overflow-hidden bg-muted"
               >
                 <img
                   src="./assets/images/card-2.webp"
-                  class="w-full h-full object-cover scale-100 group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  class="w-full h-full object-cover scale-100 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   alt="Interior architectural details of a modern luxury estate showcasing clean geometric lines"
                   loading="lazy"
                   decoding="async"
@@ -441,7 +441,7 @@
               <div class="flex flex-col group">
                 <label
                   for="firstname"
-                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
+                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
                   >First Name
                   <span class="text-accent font-bold ml-1" aria-hidden="true"
                     >*</span
@@ -455,14 +455,14 @@
                   required
                   aria-required="true"
                   autocomplete="given-name"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
               </div>
 
               <div class="flex flex-col group">
                 <label
                   for="lastname"
-                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
+                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
                   >Last Name
                   <span class="text-accent font-bold ml-1" aria-hidden="true"
                     >*</span
@@ -476,14 +476,14 @@
                   required
                   aria-required="true"
                   autocomplete="family-name"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
               </div>
 
               <div class="flex flex-col group">
                 <label
                   for="email"
-                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
+                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
                   >Email<span
                     class="text-accent font-bold ml-2"
                     aria-hidden="true"
@@ -498,14 +498,14 @@
                   required
                   aria-required="true"
                   autocomplete="email"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
               </div>
 
               <div class="flex flex-col group">
                 <label
                   for="subject"
-                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
+                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
                   >Subject<span
                     class="text-accent font-bold ml-2"
                     aria-hidden="true"
@@ -519,14 +519,14 @@
                   placeholder="Enter your subject"
                   required
                   aria-required="true"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
               </div>
 
               <div class="flex flex-col group">
                 <label
                   for="message"
-                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-200"
+                  class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
                   >Message<span
                     class="text-accent font-bold ml-2"
                     aria-hidden="true"
@@ -540,7 +540,7 @@
                   rows="4"
                   required
                   aria-required="true"
-                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-200 ease-in-out resize-none"
+                  class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out resize-none"
                 ></textarea>
               </div>
 
