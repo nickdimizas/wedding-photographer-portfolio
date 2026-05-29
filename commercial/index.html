@@ -229,6 +229,123 @@
           </p>
         </div>
       </section>
+
+      <!-- Grid project container -->
+      <div class="px-6 md:px-16 max-w-6xl mx-auto pb-24 space-y-32">
+        <!-- Project 1 -->
+        <section aria-labelledby="proj-kifisia">
+          <div class="mb-8">
+            <h2
+              id="proj-kifisia"
+              class="font-serif text-xl md:text-2xl text-primary tracking-tight"
+            >
+              The Kifisia Residence
+            </h2>
+            <p
+              class="font-sans text-[11px] text-secondary/60 uppercase tracking-widest mt-1"
+            >
+              Architecture & Interior
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+            <!-- Wrapper button-container for image-->
+            <button
+              class="md:col-span-12 w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              data-lightbox-src="../assets/images/commercial/kifisia-hero.webp"
+              aria-label="View full screen image of Kifisia Residence Exterior"
+            >
+              <img
+                src="../assets/images/hero.webp"
+                alt="Kifisia Residence Exterior"
+                class="w-full h-auto object-cover"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </button>
+
+            <!-- Wrapper button-container for image-->
+            <button
+              class="md:col-span-6 w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              data-lightbox-src="../assets/images/commercial/kifisia-interior-1.webp"
+              aria-label="View full screen image of Kifisia Interior Column"
+            >
+              <img
+                src="../assets/images/card-1.webp"
+                alt="Kifisia Interior Column"
+                class="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+
+            <!-- Wrapper button-container for image-->
+            <button
+              class="md:col-span-6 w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              data-lightbox-src="../assets/images/commercial/kifisia-interior-2.webp"
+              aria-label="View full screen image of Kifisia Geometric Alignment"
+            >
+              <img
+                src="../assets/images/card-2.webp"
+                alt="Kifisia Geometric Alignment"
+                class="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Modal for fullscreen preview-->
+      <div
+        id="lightbox-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Full screen image viewer"
+      >
+        <!-- Background box-->
+        <button
+          id="lightbox-close-bg"
+          class="absolute inset-0 cursor-zoom-out"
+          tabindex="-1"
+          aria-hidden="true"
+        ></button>
+
+        <!-- Close fullscreen button-->
+        <button
+          id="lightbox-close-btn"
+          class="absolute top-6 right-6 z-10 p-3 text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm transition-colors cursor-pointer"
+          aria-label="Close presentation view"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            stroke-width="1.2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Wrapper container for image in modal -->
+        <div
+          class="relative max-w-[90vw] max-h-[85vh] transform scale-95 transition-transform duration-300 ease-out"
+        >
+          <img
+            id="lightbox-target-img"
+            src=""
+            alt=""
+            class="w-full h-full object-contain select-none"
+          />
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
