@@ -2,7 +2,7 @@
   "name": "wedding-photographer-portfolio",
   "version": "1.0.0",
   "description": "Modern responsive wedding photographer portfolio built with HTML, Tailwind CSS and JavaScript.",
-  "main": "tailwind.config.js",
+  "main": "src/js/main.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
     "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify"
@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/nickdimizas/wedding-photographer-portfolio/issues"
   },

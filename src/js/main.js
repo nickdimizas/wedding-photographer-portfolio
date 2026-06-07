@@ -1,1 +1,5 @@
-console.log("Project initialized");
+import { initNavigation } from "./modules/navigation.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initNavigation();
+});
