@@ -454,10 +454,11 @@
             <p class="text-sm text-secondary/80 mt-2">Athens, Greece</p>
 
             <form
+              id="contact-form"
               class="flex flex-col gap-5 mt-10 md:items-stretch text-secondary"
               novalidate
             >
-              <div class="flex flex-col group">
+              <div class="flex flex-col group form-control">
                 <label
                   for="firstname"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
@@ -476,9 +477,12 @@
                   autocomplete="given-name"
                   class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
+                <span
+                  class="error-msg text-[11px] font-sans text-red-500 mt-1 max-h-0 opacity-0 transition-all duration-300 ease-in-out overflow-hidden"
+                ></span>
               </div>
 
-              <div class="flex flex-col group">
+              <div class="flex flex-col group form-control">
                 <label
                   for="lastname"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
@@ -497,9 +501,12 @@
                   autocomplete="family-name"
                   class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
+                <span
+                  class="error-msg text-[11px] font-sans text-red-500 mt-1 max-h-0 opacity-0 transition-all duration-300 ease-in-out overflow-hidden"
+                ></span>
               </div>
 
-              <div class="flex flex-col group">
+              <div class="flex flex-col group form-control">
                 <label
                   for="email"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
@@ -519,9 +526,12 @@
                   autocomplete="email"
                   class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
+                <span
+                  class="error-msg text-[11px] font-sans text-red-500 mt-1 max-h-0 opacity-0 transition-all duration-300 ease-in-out overflow-hidden"
+                ></span>
               </div>
 
-              <div class="flex flex-col group">
+              <div class="flex flex-col group form-control">
                 <label
                   for="subject"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
@@ -540,9 +550,12 @@
                   aria-required="true"
                   class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out"
                 />
+                <span
+                  class="error-msg text-[11px] font-sans text-red-500 mt-1 max-h-0 opacity-0 transition-all duration-300 ease-in-out overflow-hidden"
+                ></span>
               </div>
 
-              <div class="flex flex-col group">
+              <div class="flex flex-col group form-control">
                 <label
                   for="message"
                   class="text-sm font-sans mb-1 text-secondary/80 group-focus-within:text-primary transition-colors duration-300"
@@ -561,9 +574,13 @@
                   aria-required="true"
                   class="border border-primary/20 rounded-sm px-3 py-2 outline-none hover:border-accent-hover focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-colors duration-300 ease-in-out resize-none"
                 ></textarea>
+                <span
+                  class="error-msg text-[11px] font-sans text-red-500 mt-1 max-h-0 opacity-0 transition-all duration-300 ease-in-out overflow-hidden"
+                ></span>
               </div>
 
               <button
+                id="contact-submit-btn"
                 type="submit"
                 class="mt-4 w-max px-10 py-4 font-sans text-xs md:text-sm uppercase border border-accent/10 rounded-sm text-surface bg-gradient-to-tr from-accent to-[#ccaa85] hover:from-accent-hover hover:to-accent active:scale-[0.98] cursor-pointer tracking-widest focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all duration-300 ease-in-out"
               >
