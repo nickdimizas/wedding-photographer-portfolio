@@ -1,3 +1,15 @@
+/**
+ * @file navigation.js
+ * @description Controls the responsive mobile menu panel, handling transitions,
+ * visibility flags, and background interaction locking.
+ */
+
+/**
+ * Initializes listeners for mobile drawer interactive items.
+ * Handles display toggles and updates screen-reader accessibility parameters.
+ * @returns {void}
+ */
+
 export function initNavigation() {
   const menuToggle = document.querySelector("#menu-toggle");
   const menuText = document.querySelector("#menu-text");
@@ -15,7 +27,7 @@ export function initNavigation() {
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("block");
 
-    document.body.classList.remove("overflow-hidden");
+    document.body.classList.remove("overflow-hidden"); // Restores screen scrolling
   }
 
   function openMenu() {
@@ -27,18 +39,19 @@ export function initNavigation() {
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("block");
 
-    document.body.classList.add("overflow-hidden");
+    document.body.classList.add("overflow-hidden"); // Freezes background layout scrolling
   }
 
+  // Toggle mobile display frame view state
   menuToggle.addEventListener("click", () => {
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-
     isExpanded ? closeMenu() : openMenu();
+  });
 
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        closeMenu();
-      });
+  // Close the overlay panel automatically when any link item is clicked
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
     });
   });
 }
