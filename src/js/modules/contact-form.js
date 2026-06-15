@@ -36,6 +36,7 @@ export function initContactForm() {
     inputElement.classList.add(
       "border-primary/20",
       "focus-visible:border-accent",
+      "focus-visible:ring-1",
       "focus-visible:ring-accent",
     );
 
@@ -59,6 +60,7 @@ export function initContactForm() {
     inputElement.classList.remove(
       "border-primary/20",
       "focus-visible:border-accent",
+      "focus-visible:ring-1",
       "focus-visible:ring-accent",
     );
     inputElement.classList.add(
