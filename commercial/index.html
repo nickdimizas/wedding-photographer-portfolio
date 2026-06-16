@@ -296,26 +296,15 @@
         </section>
       </div>
 
-      <!-- Modal for fullscreen preview-->
-      <div
+      <!-- Lightbox Modal Window for largescreen preview-->
+      <dialog
         id="lightbox-modal"
-        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Full screen image viewer"
+        class="fixed inset-0 w-screen h-screen bg-black/95 backdrop:bg-black/95 p-0 m-0 max-w-none max-h-none justify-center items-center overflow-hidden outline-none open:flex hidden z-[100]"
       >
-        <!-- Background box-->
-        <button
-          id="lightbox-close-bg"
-          class="absolute inset-0 cursor-zoom-out"
-          tabindex="-1"
-          aria-hidden="true"
-        ></button>
-
-        <!-- Close fullscreen button-->
+        <!-- Close largecreen preview button-->
         <button
           id="lightbox-close-btn"
-          class="absolute top-6 right-6 z-10 p-3 text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm transition-colors cursor-pointer"
+          class="absolute top-6 right-6 z-10 p-3 text-white/70 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Close presentation view"
         >
           <svg
@@ -335,16 +324,16 @@
 
         <!-- Wrapper container for image in modal -->
         <div
-          class="relative max-w-[90vw] max-h-[85vh] transform scale-95 transition-transform duration-300 ease-out"
+          class="max-w-[90vw] max-h-[80vh] w-full h-full flex items-center justify-center transform scale-95 transition-transform duration-300 ease-out select-none"
         >
           <img
             id="lightbox-target-img"
             src=""
             alt=""
-            class="w-full h-full object-contain select-none"
+            class="max-w-full max-h-full object-contain rounded-sm pointer-events-none"
           />
         </div>
-      </div>
+      </dialog>
     </main>
 
     <!-- Footer -->
