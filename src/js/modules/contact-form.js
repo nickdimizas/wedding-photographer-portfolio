@@ -2,6 +2,7 @@
  * @file contact.js
  * @description Manages contact form validation, user interface feedback loops,
  * and asynchronous data payloads for serverless backend integration.
+ * @module modules/contact-form
  */
 
 /**
@@ -14,7 +15,7 @@ export function initContactForm() {
   const form = document.querySelector("#contact-form");
   const submitBtn = document.querySelector("#contact-submit-btn");
 
-  // Halt execution if the form layout elements are missing on this page
+  // Halt execution if the form layout elements are missing on the current page
   if (!form || !submitBtn) return;
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;

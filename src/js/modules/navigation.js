@@ -2,6 +2,7 @@
  * @file navigation.js
  * @description Controls the responsive mobile menu panel, handling transitions,
  * visibility flags, and background interaction locking.
+ * @module modules/navigation
  */
 
 /**
