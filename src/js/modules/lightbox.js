@@ -39,5 +39,23 @@ export function initLightbox() {
     }
   }
 
-  // TODO: Implement closeLightbox, bind event listeners for triggers, closeBtn, and dialog events
+  /**
+   * Closes the Lightbox dialog window overlay.
+   */
+  function closeLightbox() {
+    const imgWrapper = targetImg.parentElement;
+    if (imgWrapper) {
+      imgWrapper.classList.remove("scale-100");
+      imgWrapper.classList.add("scale-95");
+    }
+
+    // Wait 300ms for Tailwind's duration-300 scale animation to finish
+    setTimeout(() => {
+      dialog.close();
+      dialog.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }, 300);
+  }
+
+  // TODO: Bind event listeners for triggers, closeBtn, backdrop clicks, and native dialog cancel
 }
