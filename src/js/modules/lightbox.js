@@ -24,7 +24,7 @@ export function initLightbox() {
    */
   function openLightbox(hiResSrc, altText) {
     targetImg.src = hiResSrc;
-    targetImg.alt = altText || "";
+    targetImg.alt = altText;
 
     dialog.classList.remove("hidden");
     dialog.showModal();
@@ -57,5 +57,27 @@ export function initLightbox() {
     }, 300);
   }
 
-  // TODO: Bind event listeners for triggers, closeBtn, backdrop clicks, and native dialog cancel
+  // --- Event Bindings ---
+  triggers.forEach((btnTrigger) => {
+    btnTrigger.addEventListener("click", () => {
+      const hiResPath = btnTrigger.getAttribute("data-lightbox-src");
+      const innerImgAlt = btnTrigger.querySelector("img")?.alt || "";
+
+      openLightbox(hiResPath, innerImgAlt);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeLightbox();
+    }
+  });
+
+  // Intercept native Escape key snap-shut to handle exit transition gracefully
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeLightbox();
+  });
 }
