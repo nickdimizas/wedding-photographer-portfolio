@@ -49,12 +49,9 @@ export function initLightbox() {
       imgWrapper.classList.add("scale-95");
     }
 
-    // Wait 300ms for Tailwind's duration-300 scale animation to finish
-    setTimeout(() => {
-      dialog.close();
-      dialog.classList.add("hidden");
-      document.body.classList.remove("overflow-hidden");
-    }, 300);
+    dialog.close();
+    dialog.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
   }
 
   // --- Event Bindings ---
