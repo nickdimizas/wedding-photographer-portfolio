@@ -483,7 +483,7 @@
       <!-- Lightbox Dialog Window for largescreen preview-->
       <dialog
         id="lightbox-dialog"
-        class="fixed inset-0 w-screen h-screen bg-transparent backdrop:bg-black/95 p-0 m-0 max-w-none max-h-none justify-center items-center overflow-hidden outline-none open:flex hidden z-[100]"
+        class="fixed inset-0 w-screen h-screen bg-black/95 p-0 m-0 max-w-none max-h-none justify-center items-center overflow-hidden outline-none open:flex hidden z-[100] cursor-zoom-out"
       >
         <!-- Close largecreen preview button-->
         <button
@@ -508,7 +508,7 @@
 
         <!-- Wrapper container for image in dialog -->
         <div
-          class="transform scale-95 transition-transform duration-300 ease-out select-none pointer-events-auto"
+          class="transform scale-95 transition-transform duration-300 ease-out select-none pointer-events-auto cursor-default"
         >
           <img
             id="lightbox-target-img"
