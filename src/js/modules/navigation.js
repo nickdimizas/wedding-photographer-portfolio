@@ -28,7 +28,7 @@ export function initNavigation() {
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("block");
 
-    document.body.classList.remove("overflow-hidden"); // Restores screen scrolling
+    document.body.classList.remove("overflow-hidden");
   }
 
   function openMenu() {
@@ -40,16 +40,14 @@ export function initNavigation() {
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("block");
 
-    document.body.classList.add("overflow-hidden"); // Freezes background layout scrolling
+    document.body.classList.add("overflow-hidden");
   }
 
-  // Toggle mobile display frame view state
   menuToggle.addEventListener("click", () => {
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
     isExpanded ? closeMenu() : openMenu();
   });
 
-  // Close the overlay panel automatically when any link item is clicked
   mobileLinks.forEach((link) => {
     link.addEventListener("click", () => {
       closeMenu();

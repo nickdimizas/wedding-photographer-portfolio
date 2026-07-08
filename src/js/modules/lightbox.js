@@ -14,7 +14,6 @@ export function initLightbox() {
   const targetImg = document.querySelector("#lightbox-target-img");
   const triggers = document.querySelectorAll("[data-lightbox-src]");
 
-  // Halt execution if core markup components are missing on the current page
   if (!dialog || !closeBtn || !targetImg || triggers.length === 0) return;
 
   /**

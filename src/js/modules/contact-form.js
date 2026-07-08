@@ -15,7 +15,6 @@ export function initContactForm() {
   const form = document.querySelector("#contact-form");
   const submitBtn = document.querySelector("#contact-submit-btn");
 
-  // Halt execution if the form layout elements are missing on the current page
   if (!form || !submitBtn) return;
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
