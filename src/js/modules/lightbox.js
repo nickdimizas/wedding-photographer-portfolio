@@ -51,6 +51,9 @@ export function initLightbox() {
     dialog.close();
     dialog.classList.add("hidden");
     document.body.classList.remove("overflow-hidden");
+
+    targetImg.removeAttribute("src");
+    targetImg.alt = "";
   }
 
   // --- Event Bindings ---
@@ -71,7 +74,6 @@ export function initLightbox() {
     }
   });
 
-  // Intercept native Escape key snap-shut to handle exit transition gracefully
   dialog.addEventListener("cancel", (event) => {
     event.preventDefault();
     closeLightbox();
