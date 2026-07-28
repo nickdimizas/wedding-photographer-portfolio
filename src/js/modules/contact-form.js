@@ -1,7 +1,7 @@
 /**
- * @file contact.js
+ * @file contact-form.js
  * @description Manages contact form validation, user interface feedback loops,
- * and asynchronous data payloads for serverless backend integration.
+ * and asynchronous data payloads for serverless backend integration via Web3Forms.
  * @module modules/contact-form
  */
 
@@ -83,6 +83,14 @@ export function initContactForm() {
    */
 
   function isFieldValid(inputElement) {
+    // Ignore hidden inputs (like botcheck honeypot or access_key) during field-level error checks
+    if (
+      inputElement.type === "hidden" ||
+      inputElement.classList.contains("hidden")
+    ) {
+      return true;
+    }
+
     const value = inputElement.value.trim();
 
     if (inputElement.hasAttribute("required") && !value) {
@@ -131,9 +139,16 @@ export function initContactForm() {
 
     if (!isFormValid) return;
 
-    // Automated extraction of all form fields based on their HTML name attributes
+    // Build the form payload
     const formData = new FormData(form);
-    const formPayload = Object.fromEntries(formData.entries());
+
+    // Silent anti-spam exit: If honeypot checkbox is checked, drop silently
+    if (formData.get("botcheck")) {
+      return;
+    }
+
+    const formPayload = Object.fromEntries(formData);
+    const jsonFormPayload = JSON.stringify(formPayload);
 
     // Lock submit button to prevent double-submissions
     submitBtn.disabled = true;
@@ -141,17 +156,33 @@ export function initContactForm() {
     submitBtn.textContent = "Sending...";
 
     try {
-      console.log("Transmitting verified payload data block:", formPayload);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: jsonFormPayload,
+      });
 
-      // Simulation of network transmission latency
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const result = await response.json();
 
-      alert("Thank you! Your message has been sent successfully.");
-      form.reset();
-      inputs.forEach((inputElement) => clearError(inputElement)); // Clear UI styling residue
+      if (response.status === 200 && result.success) {
+        alert("Thank you! Your message has been sent successfully.");
+        form.reset();
+        inputs.forEach((inputElement) => clearError(inputElement));
+      } else {
+        console.error("Web3Forms error response:", result);
+        alert(
+          result.message ||
+            "An issue occurred during transmission. Please try again.",
+        );
+      }
     } catch (error) {
       console.error("Asynchronous transmission sequence failed:", error);
-      alert("An issue occurred during transmission. Please try again.");
+      alert(
+        "Something went wrong. Please check your internet connection and try again.",
+      );
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalBtnText;
