@@ -6,7 +6,7 @@ A premium, high-end editorial portfolio application built for Athens-based photo
 
 ## 🚀 Live Preview
 
-- 🌐 **Live Link:** https://wedding-photographer-portfolio.vercel.app
+- 🌐 **Live Link:** https://wedding-photographer-portfolio-six.vercel.app/
 
 ---
 
